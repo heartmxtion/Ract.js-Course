@@ -1,0 +1,49 @@
+p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form {
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 230px;
+  width: 800px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+input[type="text"] {
+  display: flex;
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  display: flex;
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  display: flex;
+  background: #450850;
+  color: white;
+  padding: 5px;
+  justify-content: center;
+  width: 100px;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+input[type="button"]:hover {
+  background: #751086;
+  transition: 0.2s ease;
+}
+
+input[type="button"]:active {
+  background: #9816af;
+  transition: 0.2s ease;
+}
