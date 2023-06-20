@@ -3,16 +3,6 @@ p {
   margin-bottom: 10px;
 }
 
-.form {
-  margin: 0 auto;
-  margin-top: 30px;
-  height: 230px;
-  width: 800px;
-  border: 1px solid black;
-  padding: 20px;
-  border-radius: 15px;
-}
-
 input[type="text"] {
   display: flex;
   width: 100%;
@@ -27,7 +17,7 @@ input[type="number"] {
   margin-bottom: 10px;
 }
 
-input[type="submit"] {
+input[type="button"] {
   display: flex;
   background: #450850;
   color: white;
