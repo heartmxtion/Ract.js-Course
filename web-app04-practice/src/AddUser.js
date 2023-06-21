@@ -2,8 +2,10 @@ import { useState } from "react";
 import "./AddUser.module.css";
 
 function AddUser(props) {
-  const [userName, setUserName] = useState();
-  const [userAge, setUserAge] = useState();
+  const [userName, setUserName] = useState("");
+  const [userAge, setUserAge] = useState("");
+
+  const [userData, setUserData] = useState([]);
 
   function nameHandler(event) {
     setUserName(event.target.value);
@@ -12,16 +14,18 @@ function AddUser(props) {
   function ageHandler(event) {
     setUserAge(event.target.value);
   }
-  
-  const userData = {
-    name: userName,
-    age: userAge,
-  };
 
   function buttonHandler() {
-    props.OnUserData(userData);
+    if (userName.length > 0 && userAge.length > 0) {
+      const newUserData = {
+        key: Math.random(0.1, 9999),
+        name: userName,
+        age: userAge
+      }
+      setUserData(prevUserData => [...prevUserData, newUserData]);
+      props.OnUserData([...userData, newUserData]);
+    }
   }
-
 
   return (
     <div>
